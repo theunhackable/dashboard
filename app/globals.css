@@ -76,5 +76,5 @@
 }
 
 .main {
-  @apply sm:ml-[200px] py-10 px-16
+  @apply md:ml-[200px] py-10 px-6 md:py-10 md:px-16 
 }

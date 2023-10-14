@@ -2,9 +2,11 @@ import React from 'react'
 
 const Promote = () => {
   return (
-    <div>
-      
-    </div>
+    <main className='main'>
+      <h1 className="text-2xl font-extrabold">
+        Promote your stuff
+      </h1>
+    </main>
   )
 }
 

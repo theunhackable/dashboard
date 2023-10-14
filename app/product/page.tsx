@@ -2,9 +2,11 @@ import React from 'react'
 
 const Product = () => {
   return (
-    <div>
-      
-    </div>
+    <main className='main'>
+      <h1 className="text-2xl font-extrabold">
+        Browse Products 
+      </h1>
+    </main>
   )
 }
 
