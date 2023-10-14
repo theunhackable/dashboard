@@ -47,6 +47,7 @@ export const options = {
   borderRadius: 5,
   backgroundColor: '#F2EFFF',
   hoverBackgroundColor	: '#5A32EA',
+  barThickness: 30,
 
 
 };
