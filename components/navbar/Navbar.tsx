@@ -1,10 +1,31 @@
+"use client"
+import { useState } from "react";
 import NavMenu from "./NavMenu";
+import {AiOutlineClose} from 'react-icons/ai'
+import {BiMenuAltRight} from 'react-icons/bi'
+import { Button } from "../ui/button";
 
 
 const Navbar = () => {
+  const [opened, setOpened] = useState(false)
   return (
     <>
-      <NavMenu />
+      <div className="max-md:hidden bg-main-darker-blue-bg">
+        <NavMenu opened={opened} setOpened={setOpened}/>
+      </div>
+      {
+      !opened &&
+      <div className="md:hidden sticky z-10 text-white bg-gray-500 w-full">
+        <BiMenuAltRight onClick={() => {setOpened(!opened)}} type='button' size={50} />
+      </div> 
+      }
+      {
+      opened && 
+      <div onClick={e => {setOpened(!opened)}}>
+        <NavMenu opened={opened} setOpened={setOpened} />
+      </div>
+
+      }
     </>
   );
 };

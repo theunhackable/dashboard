@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from "react";
+
 import {
   TbDashboard,
   TbCube,
@@ -12,6 +12,8 @@ import {
 import NavItem from "./NavItem";
 import Link from "next/link";
 import UserDetails from "../user/UserDetails";
+import { AiOutlineClose } from "react-icons/ai";
+import { Dispatch, SetStateAction } from "react";
 
 const size = 20;
 const pages = [
@@ -52,10 +54,18 @@ const pages = [
     icon: <TbHelp size={size} />,
   },
 ];
-const NavMenu = () => {
-  const [opened, setOpened] = useState(false)
+
+type NavMenuProp = {
+  opened: boolean,
+  setOpened: Dispatch<SetStateAction<boolean>>
+}
+const NavMenu = ({opened, setOpened}: NavMenuProp) => {
   return (
-    <nav className=" max-md:hidden fixed flex flex-col justify-between max-w-[250px] h-screen bg-main-darker-blue-bg text-white pt-10">
+    <nav className=" fixed flex flex-col justify-between max-w-[250px] h-screen bg-main-darker-blue-bg text-white pt-10">
+      <div className="md:hidden mb-5 mx-2">
+      <AiOutlineClose  onClick={() => setOpened(() => !opened)}type='button' className='text-white' size={25}/>
+
+      </div>
       <div id="nav-items">
         <header>
           <div className="flex items-center justify-center gap-2 p-1  mb-5">

@@ -59,7 +59,7 @@ const TableData = () => {
   return (
     <div className="bg-white rounded-lg shadow-lg p-5 flex flex-col w-full justify-between items-center">
       
-      <div className="max-md: flex-col gap-5 flex my-5 w-full items-center justify-between">
+      <div className="max-md:flex-col gap-5 flex my-5 w-full items-center justify-between">
         <h1 className="text-2xl font-extrabold">Product Sell</h1>
         <div className="flex gap-5">
           <Input  className='w-[150px]'
