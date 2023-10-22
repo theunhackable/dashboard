@@ -1,10 +1,7 @@
 "use client"
 import { useState } from "react";
 import NavMenu from "./NavMenu";
-import {AiOutlineClose} from 'react-icons/ai'
 import {BiMenuAltRight} from 'react-icons/bi'
-import { Button } from "../ui/button";
-
 
 const Navbar = () => {
   const [opened, setOpened] = useState(false)

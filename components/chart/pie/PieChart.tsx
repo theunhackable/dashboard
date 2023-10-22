@@ -1,6 +1,7 @@
 "use client";
 
 import { ResponsivePie } from "@nivo/pie";
+import { usePathname } from "next/navigation";
 
 
 const data = [
@@ -26,6 +27,7 @@ const data = [
 
 
 const MyResponsivePie = () => (
+
     <ResponsivePie
     data={data}
     margin={{ top: 10, right: 10, bottom: 10, left: 10 }}
@@ -65,7 +67,8 @@ const MyResponsivePie = () => (
 )
 
 const PieChart = () => {
- 
+ const pathname = usePathname()
+  console.log(pathname)
   return (
       <MyResponsivePie />
   );

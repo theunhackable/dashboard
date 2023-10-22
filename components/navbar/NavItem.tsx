@@ -1,13 +1,17 @@
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import React from 'react'
 import {TbChevronRight} from 'react-icons/tb'
 type NavItemProps = {
   title: string;
   icon: React.ReactNode;
+  href: string;
 }
 
-const NavItem = ({title, icon}: NavItemProps) => {
+const NavItem = ({title, icon, href}: NavItemProps) => {
+  const pathname = usePathname();
   return (
-    <div className='flex items-center rounded-sm justify-between m-2 p-2 hover:bg-main-dark-blue-bg'>
+    <Link href={href} className={`flex items-center rounded-sm justify-between m-2 p-2 hover:bg-main-dark-blue-bg ${pathname===href ? 'bg-main-dark-blue-bg': ''}`}>
       
       <div id='option-details' className='flex items-center gap-2'>
         <div id='icon'>
@@ -21,7 +25,7 @@ const NavItem = ({title, icon}: NavItemProps) => {
       <div>
         <TbChevronRight size={20} />
       </div>
-    </div>
+    </Link>
   )
 }
 

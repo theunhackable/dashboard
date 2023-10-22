@@ -2,6 +2,10 @@ import { AiOutlineDollarCircle } from 'react-icons/ai'
 import { CgNotes } from 'react-icons/cg'
 import { IoBagOutline } from 'react-icons/io5'
 import { LiaWalletSolid } from 'react-icons/lia'
+
+
+
+
 export const businessDetails = [
   {
     id: 1,

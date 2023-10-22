@@ -5,8 +5,10 @@ import SalesCard from '@/components/card/SalesCard'
 import BarChartStat from '@/components/chart/bar/BarChartStat'
 import PieChart from '@/components/chart/pie/PieChart'
 import TableData from '@/components/table/TableData'
+import { usePathname } from 'next/navigation'
 
 const Dashboard = () => {
+  
   return (
     <main className='main'>
 

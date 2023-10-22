@@ -77,10 +77,7 @@ const NavMenu = ({opened, setOpened}: NavMenuProp) => {
 
         <div id="options" className="my-10">
           {pages.map((page) => (
-            <Link key={page.id} href={page.href}>
-              {/* Use on click event to register the active nav item */}
-              <NavItem title={page.title} icon={page.icon} />
-            </Link>
+              <NavItem key={page.id} title={page.title} icon={page.icon} href={page.href} />
           ))}
         </div>
       </div>
